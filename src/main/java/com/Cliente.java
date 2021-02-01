@@ -1,4 +1,4 @@
-package com.camilo;
+package com;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

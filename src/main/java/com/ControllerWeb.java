@@ -1,4 +1,4 @@
-package com.camilo;
+package com;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -53,7 +53,7 @@ public class ControllerWeb {
 	@GetMapping("/visualizar/{id}")
 	public String visualizar(@PathVariable int id, Model model) {
 		Optional<Cliente>cliente=repo.listarId(id);
-		model.addAttribute("cliente",cliente);
+		model.addAttribute("clientep",cliente);
 		return "visualizar";
 	}
 	

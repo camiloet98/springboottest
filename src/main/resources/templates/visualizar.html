@@ -8,17 +8,51 @@
 </head>
 <body>
 	<div class="container">
-		<div class="col-sm-6" th:object="${cliente}">
-			<div class="card">
-				<div class="card-header">
-					<h3>Cliente</h3>
-				</div>
-				<div class="card-body">
-					<div class="form-group">
-						<p th:text="${cliente.nombre}"></p>
+		<div class="col-sm-6">
+			<form th:action="@{/visualizar}" th:object="${clientep}" method="POST">
+				<div class="card mt-4 mb-4">
+					<div class="card-header bg-dark text-white">
+						<h3>Cliente</h3>
+					</div>
+					<div class="card-body">
+						<div class="form-group">
+							<label>Nombres</label> <input readonly type="text" class="form-control"
+								th:field="*{nombre}">
+						</div>
+						<div class="form-group">
+							<label>Apellidos</label> <input readonly type="text" class="form-control"
+								th:field="*{apellidos}">
+						</div>
+						<div class="form-group">
+							<label>Identificacion</label> <input readonly type="number"
+								class="form-control" th:field="*{identificacion}">
+						</div>
+						<div class="form-group">
+							<label for="sel1">Tipo de documento</label> <select
+								class="form-control" readonly id="sel1">
+								<option>T.I</option>
+								<option>C.C</option>
+								<option>C.E</option>
+								<option>R.C</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label>Ciudad Nacimiento</label> <input readonly type="text"
+								class="form-control" th:field="*{ciudadNacimiento}">
+						</div>
+						<div class="form-group">
+							<label>Edad</label> <input type="number" readonly class="form-control"
+								th:field="*{edad}">
+						</div>
+						<div class="form-group">
+							<label for="exampleFormControlFile1">Foto</label> <input
+								type="file" class="form-control-file"
+								id="exampleFormControlFile1" readonly>
+								
+						</div>
 					</div>
 				</div>
-			</div>
+			</form>
 		</div>
 	</div>
 </body>

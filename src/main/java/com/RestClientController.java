@@ -1,4 +1,4 @@
-package com.camilo;
+package com;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,8 +13,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.annotations.Api;
+
 @RestController
 @RequestMapping("/clientes")
+@Api(value="/clientes", description="Clients profile", produces="application/json")
 public class RestClientController implements IClienteService{
 	
 	@Autowired
