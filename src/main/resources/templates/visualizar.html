@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="col-sm-6" th:object="${cliente}">
+			<div class="card">
+				<div class="card-header">
+					<h3>Cliente</h3>
+				</div>
+				<div class="card-body">
+					<div class="form-group">
+						<p th:text="${cliente.nombre}"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
